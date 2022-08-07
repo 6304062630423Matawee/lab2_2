@@ -1,0 +1,82 @@
+<html>
+    <head></head>
+    <body>
+        <fieldset>
+            <legend>แบบฟอร์มจองทัวร์</legend>
+            <fieldset>
+                <legend>ข้อมูลทั่วไป</legend>
+                <div>
+                    ชื่อ-นามสกุล:<br>
+                    <input type="text"
+                           pattern="\w+"
+                           placeholder="กรอกชื่อ-สกุล"
+                           required
+                      >*
+                </div>
+                <div>
+                    Email:<br>
+                    <input type="email"required>*
+                </div>
+                <div>
+                    โทรศัพท์:<br>
+                    <input type="tel" value="+66"required>*
+                </div>
+                <div>
+                    ที่อยู่:<br>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    รหัสไปรษณีย์:
+                    <input type="text"  size="4" pattern="\d{5}">
+                </div>
+                <div>
+                    รูปผู้จอง:
+                    <input type="file">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>ข้อมูลเข้าสู่ระบบ</legend>
+                <div>
+                    Username:<br>
+                    <input type="text"pattern="\w{8,}"><br>
+                    <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่8ตัวขึ้นไป</i><br>
+                    Password:<br>
+                    <input type="password"pattern="{8,}"><br>
+                    <i>ประกอบไปด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+                <div>แพคเก็จทัวร์:
+                    <select id="tour" name="tour">
+                        <option>--select--</option>
+                        <option>ญี่ปุ่น</option>
+                        <option>เกาหลี</option>
+                        <option>จีน</option>
+                        <option>อเมริกา</option>
+                        <option>อินเดีย</option>
+                    </select>
+                </div>
+                <div>วันที่เดินทาง
+                    <input type="date">
+                </div>
+                <div>จำนวนผู้เดินทาง:
+                    <input type="number"min="1"max="10">
+                </div>
+                <div>
+                    เน้นการท่องเที่ยวแบบใด?<br>
+                    <input type="checkbox">ชอปปิ้ง
+                    <br><input type="checkbox">ธรรมชาติ
+                    <br><input type="checkbox">ทะเล
+                </div>
+            </fieldset>
+            <div>
+                ยอมรัยเงื่อนไขและข้อตกลง
+                <input type="radio" name="ag"checked>i agree
+                <input type="radio"name="ag">i disagree
+                <input type="button" value="จอง">
+            </div>
+            
+        </fieldset>
+    </body>
+</html>
